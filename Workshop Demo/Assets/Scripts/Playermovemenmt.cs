@@ -1,0 +1,27 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class Playermovemenmt : MonoBehaviour
+{
+    public float moveSpd;
+
+    private Rigidbody2D rb;
+    private Vector2 moveInput;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        rb.linearVelocity = moveInput * moveSpd;
+    }
+
+    private void OnMove(InputValue input)
+    {
+        moveInput = input.Get<Vector2>();
+    }
+}
