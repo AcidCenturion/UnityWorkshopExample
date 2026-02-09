@@ -1,0 +1,23 @@
+I'm a computer science major, so... I'll explain everything in the comments of the code.
+
+It might look a bit lengthy and complicated at first, but trust me, they're actually really
+small pieces of code - like 10 or so lines. The rest is just my comments haha.
+
+I recommend looking into the TopDownMove script first. Its the simpler of the two as we don't take
+into account any physics yet (well, technically it's being applied and stuff since we have the
+Rigidbody2D component). 
+
+After you get a good grasp of how the script receives input to control movement, take a look
+at the PlatformerMove script. Now we start adding some jump tracking and a little more physics.
+
+After that, there's a bit of a challenge I leave to you programmers to really sell these controls.
+Don't get discouraged if you have to compile 5, 10, or 20+ times before your code starts to work.
+That's part of the programming process, and when you finally get it right, I promise it will
+feel so rewarding when you see it come alive in the game preview window.
+
+Of course, there's plenty more things you can do that I can't reasonably showcase,
+so now's a good time to learn how to read documentation.
+
+
+
+"It's really quite simple" -a certain Redstone YouTuber
