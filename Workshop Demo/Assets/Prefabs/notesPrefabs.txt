@@ -1,0 +1,20 @@
+Ok, don't let the scary name intimidate you.
+While Prefabs sound like a really complicated thing, I promise you its really, really quite simple.
+I'm so confident in this being simple that I guarantee you that this is my shortest notes doc.
+
+Are you ready?
+
+
+* A Prefab... is just object copy and paste. *
+
+
+Yup. You can easily create a prefab by dragging an object from the Object Hierarchy in a Scene
+and drop it into the Prefab folder. Boom, done. You now have a prefab.
+
+Whenever you want, you can drag that Prefab from the prefab folder into a Scene's Object Hierarchy
+to add it to the scene. When you do, the object will retain all the same components and values
+(including the location coordinates, so if you place it in the same scene as the original it might
+overlap with each other).
+
+Prefabs are great to save time when you have multiple levels and you need to place the player 
+object in all the levels. Or if you have an object that reappears several times in a level.

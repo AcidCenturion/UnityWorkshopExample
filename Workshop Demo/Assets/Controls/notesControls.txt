@@ -1,0 +1,118 @@
+In this folder I've included two sets of controls for the two different genres of play that I demo.
+You can create and Action Input by right clicking the project folder, Create->Input Actions.
+Double left click to open the Input Actions Editor window.
+
+Technically, this is all unnecessary and optional as you could just hard code which key does what
+in the scripts.
+The downside to that is if you wanted to changing a binding you have to manually open the script,
+search for and change the value, then recompile the script.
+It also is a very rigid approach as it looses the flexibility of being able to be changed on the
+fly if the player wants to change input settings. I will not cover how to do input settings in this
+tutorial, but I encourage you to look it up and see the differences and advantages to
+handling controls via the Action Input System.
+
+There's quite a few things of note here so lets get started. I recommend following along in a new
+Input Action asset.
+
+
+* Save Feature *
+First, a little below the top right corner, I like to toggle on Auto-Save.
+
+
+* Control Schemes *
+On the top just below the name of the input actions is a Control Schemes drop down (currently
+labeled No Control Schemes).
+
+You can add a control scheme to set different action input setups for different devices.
+I won't be using it in my demo but feel free to play around with it.
+
+
+* Action Maps *
+You can find these just below the Control Schemes. Very big, bold lettering. These will
+populate the first of the 3 columns you see in the editor. Use the [+] button to make
+a new action map.
+
+The purpose of these is so that different gameplay modes will have their controls separated.
+Imagine the difference between controlling an soldier running across the battlefield vs
+controlling a tank with a style of unique controls literally dubbed "tank controls"
+
+We'd want to separate the way they function, right? You might want all of WASD for the soldier's
+movement, but for a tank you only want WS for forward and reverse, while AD are for pivoting.
+
+
+* Actions *
+Located to the right of the Action Maps, and populates the second column. These Actions are
+assigned to the selected Action Map when created. Make a new Action with the [+] button to
+the right of the Actions column.
+
+Remember what you name your Actions, as these are the names that will be used in the scripts
+to call functions based on the input.
+
+You can assign bindings to actions by right clicking the action, and selecting from the types of
+bindings available. The types to choose will depend on what Type the Action is and what you need
+it for.
+The bindings created will be kept in a dropdown menu respective to the action it was created for.
+
+
+* Action Properties *
+Get up for a stretch and a glass of water because this section is about to get a wee bit lengthy.
+
+All Actions have Action Properties associated with them, displayed in the column to the right of 
+the Actions column.
+
+Action Type is an important property of Actions. Actions can either be a Button, Value, or
+a Pass Through.
+
+An Action as a Button is simply, well, a check for whether the button/key is held/pressed/released.
+The Binding Types available to a Button Action are: (regular) Binding, Positive/Negative Binding,
+Binding with One Modifier, and Binding with Two Modifiers. These are the same as the Composite Type
+listed in the now labeled Binding Properties column (was Action Properties when an Action was
+selected, but changes to Binding Properties when a Binding is selected).
+
+Binding
+    - Literally just a designated key/button. 
+Positive/Negative Binding
+    - Imagine a line plot. The key/button bound to the Negative is the left of the line and the
+      key/button bound to the Positive is the right of the line. You can also decide in Binding
+      Properties if one wins over the other when both are held.
+Binding with Modifiers
+    - This means that the action of one binding is changed when another binding is utilized.
+      For example, a character can walk forward with W, or sprint with W if Shift is held.
+
+Alright, so those are the bindings for a Button action type. What about a Value action type?
+Well, a Value action type describes a combination of buttons in a numerical method.
+4 of the binding types (composite types) are the same. But there are two new ones that work
+similar to each other.
+Up/Down/Left/Right(/Forward/Backward) Composite
+    - This sets the bindings on a coordinate plane, with each in their own direction. 
+      Notice the Composite type. The Positive/Negative Binding uses a 1D axis (line plot) whereas
+      these new bindings use either a 2D Vector or a 3D Vector.
+      The "Composite" part of that just means it takes the combination of them. So for imagine
+      the 4 arrow keys are bound (in the directions you'd expect). Holding Up Arrow and Right Arrow
+      yields a combined Up + Right direction.
+      The Mode for this is also important (right below Composite Type).
+          - Analog is basically for joysticks, where there are intermittent values between no input
+            and a full input.
+          - Digital is like an XY diagram. 1 (meaning right) for the X and -1 (meaning down)
+            combine to form the point (1, -1). That's the combined direction of the two buttons.
+          - Digital Normalized takes the unit circle approach instead. The problem with Digital is
+	    when you hold two buttons to get that corner value, the magnitude from 0 to that point
+	    is greater than 0 to a point on the axis. Digital Normalized ensure that the magnitude
+	    is equal in all directions.
+            Just look at the difference between the corners of a square [] and the lack thereof in
+	    a circle O
+
+I'm going to skip talking about the Pass-Through, because it's pretty similar to the above just
+with slightly different use cases (VR is often one of said use cases).
+
+Also note the Interactions drop down for Action Properties. This dictates how the player interacts
+with the binding. Imagine a sci-fi shooter. Do they press the button for a single shot? Maybe they
+hold the button for rapid fire? Or maybe even the hold the button to charge then release to fire!
+
+Wow that was a lot of information. To finish off, let me just explain what you might've already 
+figured out: how to actually bind a key. Select a Binding and in the Binding Properties just pick
+the Path to that key/button (for instance, W [Keyboard]). Yup. That's it.
+
+
+Please go and try these out for yourself. They make much more sense when you start playing with
+them and seeing what you just read in action.

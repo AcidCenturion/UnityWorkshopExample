@@ -2,6 +2,10 @@ Hi! I'm Michael. I'll be hosting the Unity Workshop this semester.
 
 This is a downloadable Unity project that I will use as a guideline for the workshop. Please install this ahead of time, so that you may use this as a template to start your own experiments in the Unity engine! Feel free to copy the code from this project, as its pretty hard to make a game have functionality without code (and I understand that not everyone in this workshop is a CSC major). Or, go ahead and just make new scenes directly in this project and reuse the assets I've included.
 
+I would also like to preface that this little demo will not teach you everything you need to know about Unity. And, to be honest, I think it'd be pretty difficult to find someone who know EVERYTHING about Unity and could teach it in one sitting haha. But, my goal here is to equip you with the bare minimum to make something function, and to give you some tools and options to make something uniquely yours.
+
+I've also included in this project some extra notes. If you missed something during the workshop or are looking back to review after the workshop, the notes should make a good reference to what I talked about. Keep an eye out for files labeled notes[Topic].txt! I'd also recommend following along in the notes and marking things you don't quite understand or that I didn't explain clearly. That way, even if you can't word a question immediately, you will still know to ask me something on that topic.
+
 
 
 vvvvv GITHUB INSTRUCTIONS vvvvv

@@ -73,17 +73,5 @@
             ]
         }
     ],
-    "controlSchemes": [
-        {
-            "name": "Keyboard not Mouse",
-            "bindingGroup": "Keyboard not Mouse",
-            "devices": [
-                {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": false,
-                    "isOR": false
-                }
-            ]
-        }
-    ]
+    "controlSchemes": []
 }
