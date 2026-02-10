@@ -1,0 +1,89 @@
+Alright so this is the engine's bread and butter. You will basically always be spending time in a 
+scene as you work on a project. Now, what is a Scene? basically, its a level. Well, that's one way
+to go about dividing the game into Scenes. You can use scenes in a variety of ways. For instance,
+a menu screens are very often a scene of its own.
+
+When you double click to open a scene, you should see the name of that scene in the top left of the
+screen (below the Unity 6, below Hierarchy). Its good to check that you are in the scene you intend
+to be in before you start making changes.
+
+
+* Objects (and Object Hierarchy) *
+This whole block of the screen is called the Object Hierarchy (or just simply the Hierarchy).
+Things below the Scene's name are called Objects. You can add an Object by right clicking the blank
+space in the Hierarchy and selecting the kind of object you want to create. You can make an entire
+game just from adding in shape objects.
+
+If one shape for an object isn't enough for you, you can add shapes and "children" of the "parent."
+That's common Comp Sci terms to say that something inherits the traits of something else. For 
+instance, I can create a capsule as the player, then add another square on top to represent a hat
+which is also part of the player.
+
+
+* Components (and Inspector) *
+Every Object can have its own set of Components. You can see the components of an Object when you
+select an object and look over to the right side of the screen in the chunk labeled Inspector at
+the top. Objects also have Names, Tags, and Layers.
+
+Names are pretty self explanatory.
+
+Tags and Layers are very similar and can often be used interchangeably. This is how you distinguish
+objects from one another. For instance, in a platformer, the player should often be able to jump
+off the ground. But maybe there's a sticky honey floor section that the player can't jump off of.
+You could create a Ground layer and a Honey layer and check which layer you are on in the code.
+
+You can have a lot of components on an object, and there are many, many, many components to choose
+from. You will even often make your own components to add to an object (like a script).
+
+These modify/control details about the object that makes it more unique than a shape on a canvas.
+An object named Player wouldn't be much of a player without the functionality to control it, right?
+
+Now I can't get into all of the components in the world, but I'll go over some very common, very
+frequent, and very important components you will very likely use.
+
+Sprite Renderer
+    - As the name implies, this is how you would apply a sprite. A sprite is an art asset to add
+      visuals to the character (in case you don't want to stick with primitive shapes).
+    - You can actually just drop in a file in the Sprite attribute of the component. You should
+      first organize sprites into a Sprites folder within the Assets folder, however.
+
+Rigidbody (2D)
+    - This gives an object physics. Technically you could move an object around with 
+      the Transform component, but that heavily limits your control. Instead, you can just
+      manipulate the object's velocity with a Rigidbody. This also applies gravity and other
+      physics like linear dampening (which is kind of like air resistance) and mass.
+
+Colliders of various shapes
+    - Without a collider, and object doesn't have a physical presence. So, if you want things to be
+      ghost like, then by all means have no collider haha. But, if you want your player to be able
+      to stand on floor or get blocked by a wall then they need to have a collider. The object with
+      which you want things to collide into must also have a collider.
+    - There's a second use for colliders and that's a trigger. There's a little Is Trigger checkbox
+      option within the collider component. When checked, the collider is not used for physical
+      presence, but is instead use to check if something enters the collision area.
+    - You can also shape the collider in case your character has a unique figure. Just click the
+      Edit Collider button and some green dots and lines will appear around your object. That shape
+      is the shape of the collider, and you can click and drag the dots to reshape it.
+    - Don't forget than an object can have more than one collider! so feel free to have both a 
+      trigger collider and a physical collider.
+
+Player Input
+    - To use the Action Input control schemes we set up, you need this collider. Once you add it, 
+      you can easily click and drag the Action Input asset into the Actions field of the component.
+
+Scripts
+    - When you make your own scripts, you need to attach the script to an object in the Scene for
+      it to take affect and do something. Just drag and drop the script into an object to give it
+      the script as a component.
+
+Audio Source
+    - I don't have one of these in the project right now, but this is how you would play audio in a
+      scene. Like always, drag and drop an asset, in this case the audio asset, into the Audio
+      Source component to assign it as the attribute for the audio source and set how you want it
+      to play.
+    - Don't forget, the Game Preview window may be muted. There's a speaker icon to the top right
+      of the preview window, next to the keyboard looking icon. If it has an X on it, then its
+      muted and you won't be able to hear your audio source until you click to unmute and see the
+      icon update with little waves coming out of the speaker.
+    - Just like the Assets and the Scripts, I recommend creating a folder or two to organize your
+      sounds.
